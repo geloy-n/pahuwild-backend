@@ -1,0 +1,104 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id                 String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String    @default("NO_NAME")
+  email              String    @unique(map: "user_email_idx")
+  password           String
+  role               Role      @default(USER)
+  booking            Booking[]
+  review             Reviews[]
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+
+model Cabin {
+  id                 String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name               String    
+  location           String
+  slug               String
+  guests             Int
+  description        String
+  price              Decimal   @db.Decimal(10, 2)  
+  isFeatured         Boolean   
+  wifi               Boolean   
+  parking            Boolean   
+  kitchen            Boolean   
+  hotTub             Boolean   
+  fireplace          Boolean   
+  hiking             Boolean   
+  isAvailable        Boolean   
+  rating             Decimal   @default(0) @db.Decimal(3, 2)
+  numReviews         Int       @default(0)
+  createdAt          DateTime  @default(now()) @db.Timestamp(6)
+  booking            Booking[]
+  review             Reviews[]
+}
+
+model Booking {
+  id                String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId            String    @db.Uuid
+  cabinId           String?    @db.Uuid 
+  checkInDate       DateTime  @db.Date 
+  checkInTime       String
+  checkOutDate      DateTime  @db.Date 
+  checkOutTime      String
+  nights            Int
+  total             Decimal   @db.Decimal(10, 2)
+  firstName         String
+  lastName          String
+  email             String    
+  phoneNumber       String
+  requests          String
+  isCancelledReason String?
+  isCancelledBy     String?
+  hasReview         Boolean   @default(false)
+  review            Reviews[]
+
+  status            Status    @default(pending)
+  cabin             Cabin?     @relation(fields: [cabinId], references: [id], onDelete: SetNull)
+  user              User      @relation(fields: [userId], references: [id])
+}
+
+
+model Reviews {
+  id                String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId            String    @db.Uuid
+  cabinId           String    @db.Uuid
+  bookingId         String    @db.Uuid 
+  rating            Int
+  comment           String
+  createdAt         DateTime  @default(now()) @db.Timestamp(6)
+
+  cabin             Cabin     @relation(fields: [cabinId], references: [id])
+  user              User      @relation(fields: [userId], references: [id])
+  booking           Booking   @relation(fields: [bookingId], references: [id])
+  
+}
+
+enum Status {
+  pending
+  confirmed
+  checkedIn
+  completed
+  cancelled
+}
+
