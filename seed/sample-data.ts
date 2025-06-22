@@ -8,7 +8,6 @@ const sampleData = {
       description:
         'Escape to Pine Haven Retreat, where towering pine trees create a natural sanctuary around your private wilderness getaway. This beautifully appointed cabin offers the perfect blend of rustic charm and modern comfort, featuring a spacious living area with a stone fireplace, fully equipped kitchen, and panoramic windows that frame breathtaking mountain vistas. Wake up to the sound of birdsong and spend your days exploring nearby hiking trails, or simply relax on the wraparound deck with a cup of coffee as you watch the sunrise paint the peaks in golden hues.',
       price: 400,
-      image: '/images/cabins/pine-heaven-registerDecorator.jpg',
       isFeatured: true,
       wifi: false,
       parking: true,
@@ -28,7 +27,6 @@ const sampleData = {
       description:
         'Tucked away by the pristine waters of Crystal Lake, Whispering Pines Lodge offers a cozy escape surrounded by towering pines and gentle breezes. Perfect for families and small groups, the cabin features a spacious living room with a grand fireplace, a fully stocked kitchen, and large windows that bring the outdoors in. Spend your days fishing, kayaking, or enjoying the quiet tranquility of nature.',
       price: 500,
-      image: '/images/cabins/whispering-pines-lodge.jpg',
       isFeatured: false,
       wifi: true,
       parking: true,
@@ -48,7 +46,6 @@ const sampleData = {
       description:
         'Mountain Ridge Retreat is the ultimate getaway for larger groups seeking adventure and relaxation. Situated on the edge of a vast mountain ridge, this cabin boasts expansive views of the valley below. A wraparound deck, spacious rooms with vaulted ceilings, a fully equipped kitchen, and a hot tub make this retreat a perfect choice for families and groups of friends looking to reconnect with nature.',
       price: 750,
-      image: '/images/cabins/mountain-ridge-retreat.jpg',
       isFeatured: true,
       wifi: true,
       parking: true,
@@ -68,7 +65,6 @@ const sampleData = {
       description:
         'Ideal for couples, Sunset Vista Cabin offers unmatched panoramic views of the valley, especially at sunset when the sky comes alive with colors. This quaint and cozy retreat comes with all the essentials: a fully equipped kitchen, a hot tub for two, and a fireplace to set the mood. Relax and unwind in total privacy, with hiking trails and outdoor adventures just steps away.',
       price: 350,
-      image: '/images/cabins/sunset-vista-cabin.jpg',
       isFeatured: false,
       wifi: true,
       parking: true,
@@ -88,7 +84,6 @@ const sampleData = {
       description:
         'Step outside your front door and find yourself just steps away from the soothing sounds of a gently flowing river. Riverside Getaway is perfect for those who love being near water. With a spacious living area, a kitchen stocked with all essentials, and a large porch with river views, this cabin provides a peaceful escape from the hustle and bustle of everyday life.',
       price: 450,
-      image: '/images/cabins/riverside-getaway.jpg',
       isFeatured: false,
       wifi: true,
       parking: true,
@@ -108,7 +103,6 @@ const sampleData = {
       description:
         'Tucked away in a secluded forest, Forest Edge Hideaway is perfect for those seeking peace and quiet. This cabin is surrounded by towering trees and wildlife, offering a true escape into nature. It features an open-plan living area, a wood-burning stove, and a fully equipped kitchen. Hiking and nature walks are right at your doorstep, with the occasional deer or fox wandering by.',
       price: 420,
-      image: '/images/cabins/forest-edge-hideaway.jpg',
       isFeatured: false,
       wifi: false,
       parking: true,
@@ -128,7 +122,6 @@ const sampleData = {
       description:
         'Lakeview Escape is a beautiful cabin located right on the shores of a serene and tranquil lake. With plenty of space for a family or group, the cabin offers modern amenities paired with rustic charm. A stone fireplace, large windows for stunning lake views, and a full kitchen await you. Outdoor activities include fishing, kayaking, and hiking.',
       price: 600,
-      image: '/images/cabins/lakeview-escape.jpg',
       isFeatured: true,
       wifi: true,
       parking: true,
@@ -148,7 +141,6 @@ const sampleData = {
       description:
         'Bear Creek Lodge is a charming cabin located right along the Bear Creek Trail, offering access to some of the best hiking in the area. The cabin features a spacious living area, a modern kitchen, and a large outdoor deck that overlooks the creek. After a day of hiking, you can relax by the fire pit or soak in the hot tub while listening to the creek.',
       price: 550,
-      image: '/images/cabins/bear-creek-lodge.jpg',
       isFeatured: true,
       wifi: true,
       parking: true,
@@ -168,7 +160,6 @@ const sampleData = {
       description:
         "Eagle's Nest Retreat offers a unique, elevated experience, literally! Perched atop Eagle’s Peak, this cabin gives you sweeping views of the entire valley below. With its cozy interiors, well-stocked kitchen, and hot tub on the deck, this cabin is perfect for a romantic getaway or a peaceful solo retreat. The surrounding area is great for hiking and birdwatching.",
       price: 475,
-      image: '/images/cabins/eagles-nest-retreat.jpg',
       isFeatured: false,
       wifi: true,
       parking: true,
@@ -188,7 +179,6 @@ const sampleData = {
       description:
         'The Hidden Cottage offers the perfect romantic getaway, nestled deep in the woods where you can truly disconnect. This cozy, intimate cabin is designed for two and comes with all the comforts you need: a full kitchen, fireplace, and a hot tub on the private deck. The surrounding area is peaceful, with plenty of trails to explore and the sound of nature all around.',
       price: 350,
-      image: '/images/cabins/hidden-cottage.jpg',
       isFeatured: false,
       wifi: false,
       parking: true,
